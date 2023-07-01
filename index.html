@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cartografia - Barrio Abajo</title>
+	<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+	<!-- Css styles -->
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- Js Scripts -->
+	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+	<style>
+		/* Estilo del botón */
+		.button_style {
+			background-color: pink;
+			border: 2px solid white;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			justify-content: center;
+            align-items: center;
+		}
+		.button_container {
+			text-align: center;
+			
+
+			
+		}
+		#title_image {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+        }
+		@font-face {
+        font-family: 'Made Tommy Medium';
+        src: url('fuente/MADE_TOMMY_\ Medium_PERSONAL_\ USE.otf') format('opentype');
+        }
+
+		h1 {
+			font-family: "Made Tommy Medium";
+			font-size: 21px;
+			color: #cd7d84;
+			text-align: center;
+		}
+		p{
+			font-family: "Made Tommy Medium";
+			font-size: 13px;
+			color: rgb(136, 136, 136);
+			
+		}
+		
+		
+
+		
+	</style>
+</head>
+<body style="background-color: lightgray">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="nav-side-menu">
+				<!-- Image Title -->
+				<img src="img/LOGO.png" id="title_image" class="img-fluid mt-1" alt="Distrito cultural image">
+				<p style="padding-left: 35px; padding-right: 35px; text-align: justify;"> ¡Bienvenido(a) a ExplorARQ Barrio Abajo, una ventana al fascinante mundo del patrimonio! Nuestra cartografía se ha creado con el objetivo de preservar el legado arquitectónico que ha perdurado a lo largo de los años. Cada edificio representado en este mapa tiene una historia que contar, la cual ha moldeado nuestra identidad y ha dejado una huella en el tejido de nuestras comunidades.</p>
+				<p style="padding-left: 35px; padding-right: 35px; text-align: justify;">Al interactuar con nuestra cartografía, tendrás la oportunidad de explorar estos tesoros arquitectónicos desde todos los ángulos. A medida que navegas por los diferentes puntos de interés, encontrarás información detallada sobre su importancia histórica, cultural y estética; también podrás realizar acercamientos para apreciar los minuciosos detalles de cada fachada mientras disfrutas de la inmersión virtual de nuestros modelados 3D.</p>
+				<p style="padding-left: 35px; padding-right: 35px; text-align: justify;">¿Listo(a) para comenzar tu aventura?</p>
+				<!--<<img src="img/TITULO_1.png" id="title_image" class="img-fluid mt-0" alt="montoyaEST" style="width: 70%;";style= "margin-left: auto;"; style="margin-right: auto;">-->
+				<img src="img/buttons/White/INICIO.png" id="img_INICIO" onclick="redirectToHTML('index1.html')" class="img-fluid buttons_option mt-1" alt="Button INICIO image">
+			<!--	<img src="img/buttons/White/VALORCULTURA.png" id="img_VALORCULTURA" onclick="Click_Image_Button_Option('VALORCULTURA')" class="img-fluid buttons_option mt-1" alt="Button VALORCULTURA image">
+				<img src="img/buttons/White/VALORESTETICO.png" id="img_VALORESTETICO" onclick="Click_Image_Button_Option('VALORESTETICO')" class="img-fluid buttons_option mt-1" alt="Button VALORESTETICO image">
+				style="width: 250px; height: 350px;" 
+			<img src="img/buttons/White/ELEMENTOARQUITECTÓNICO.png" id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option mt-2" alt="Button ELEMENTOARQUITECTÓNICO  image"> -->
+		<!--	<div class="button_container"> 
+				<button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option mt-1" alt="Button ELEMENTOARQUITECTÓNICO image" >BALCON</button>
+			 </div>-->
+				<!--<img src="img/buttons/White/DANZA.png" id="img_DANZA" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option" alt="Button DANZA image">
+				<img src="img/buttons/White/MEMORIA.png" id="img_MEMORIA" onclick="Click_Image_Button_Option('MEMORIA')" class="img-fluid buttons_option" alt="Button MEMORIA image">
+				<img src="img/buttons/White/ARTESANIA.png" id="img_ARTESANIA" onclick="Click_Image_Button_Option('ARTESANIA')" class="img-fluid buttons_option" alt="Button ARTESANIA image"> -->
+
+				<!-- logos Image footer -->
+				<br><br>
+				<div id="footer_image">
+					<img src="img/logo1cuc.png" id="footer_image" class="img-fluid" alt="Logos image" style="width: 180px; margin-left: 20px;">
+				</div>
+			<!--	<div class="button_container">
+					<button  class="button_style" onclick="redireccionar()">SIGUIENTE</button>
+                    
+				</div>
+
+                 <script>
+                  function redireccionar() {
+                  window.location.href = "index1.html";
+                   }
+                   </script>  -->
+		        
+			</div>
+		</div>
+
+		<div class="col-md-9">
+			<div id="MapsContainer">
+				<iframe id="MapsFrame" src="https://www.google.com/maps/d/embed?mid=139gn1W4V9aPD4RVKFXdHIhaD7_LUhIw&ehbc=2E312F"></iframe>
+			</div>
+
+			<div id="ContainerDesctipcion">
+				<span class="boton" onclick="CloseContainerDescripcion()">x</span>
+				
+				<p id="TitleDescripcion" class="h5 ml-4 mt-5"></p>
+
+				<!-- Inmuebles descripcion -->
+				<p class="ml-5" id="ELEMENTOARQUITECTÓNICODescripcion"><small class="SmallDescripcion">Balcón en hierro forjado, con piso machihembrado en madera y tres puertas de madera. Estas cuentan con rejillas de ventilación en la parte superior, y entamborado de cuatro paneles de vidrio por hoja, hechos para brindar iluminación a los espacios. Las ventanas tienen un dintel de arco achatado y están flanqueadas por almohadillados en mortero color beige que contrasta con el color verde de las puertas. El balcón está rematado por una cubierta de zinc y estructura en hierro forjado, que sirve como parasol y como protección del balcón de la lluvia.</small>
+				<br><br>
+				
+			  <!-- <button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option mt-1" alt="Button ELEMENTOARQUITECTÓNICO image" >BALCON</button>
+				<button class="button_style" id="img_Danza" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option mt-1" alt="Button DANZA image">PUERTAS </button><button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option" alt="Button ELEMENTOARQUITECTÓNICO image" >Botón 1</button> -->
+
+			    </p>
+
+				<!-- juegos descripcion -->
+				<p class="ml-5" id="VALORESTETICODescripcion"><small class="SmallDescripcion"> HOLAAA</small></p>
+
+				<!-- Cocinas descripcion -->
+				<p class="ml-5" id="VALORHISTODescripcion"><small class="SmallDescripcion">Este edificio fue construido con el fin de albergar la estación de tren que comunicaba a la ciudad de Barranquilla, para entonces el puerto más importante del país, con Sabanilla, convirtiéndose en el lugar que marcaba el final del recorrido que desde Puerto Colombia realizaba el Ferrocarril de Bolívar. Este inmueble fue declarado Monumento Arquitectónico Nacional en el año 1984, colocándolo junto con el edificio de la estación del tranvía, en la lista del Patrimonio Nacional de Colombia. </small></p>
+
+				<!-- Fiestas descripcion -->
+				<p class="ml-5" id="FiestasDescripcion"><small class="SmallDescripcion">Los ritos y rituales hacen parte del calendario cultural del bajero. Lo festivo y lo sacro se mezclan para ponerle ritmo a la vida y generar así un escenario propicio que acerca a los feligreses a un encuentro con lo
+				espiritual. Las calles se convierten en las arterias que dan vida a la procesión de santos y vírgenes como expresiones de la cultura popular. </small></p>
+
+				<!-- Danza descripcion -->
+				<p class="ml-5" id="DanzaDescripcion"><small class="SmallDescripcion">Los sonidos del Caribe retumban en los cuerpos de los danzantes y músicos que por años han gozado las carnestolendas. Millo, puya,
+				mapalé, fandango y porro son algunos de los ritmos que nutren el espíritu fiestero de quienes hoy son reconocidos como líderes de la tradición. Gracias a su labor, Barrio Abajo goza de diversas expresiones
+				relacionadas con estas fiestas. </small></p>
+
+				<!-- Memoria descripcion -->
+				<p class="ml-5" id="MemoriaDescripcion"><small class="SmallDescripcion">Con los años, el paisaje y la vida cultural de Barrio Abajo se ha transformado. Sin embargo, aún permanece en la memoria colectiva la
+				nostalgia por algunos sectores que en épocas pasadas gozaron de gran popularidad y aceptación; lugares donde alguna vez se cultivó la historia de una comunidad que nació frente al río. </small></p>
+
+				<!-- Artesania descripcion -->
+				<p class="ml-5" id="ArtesaniaDescripcion"><small class="SmallDescripcion">HOLAAA MUNDO .</small></p>
+			</div>
+		</div>
+	</div>
+	
+
+	
+</body>
+</html>

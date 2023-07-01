@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cartografia - Barrio Abajo</title>
+	<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+	<!-- Css styles -->
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- Js Scripts -->
+	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main9.js"></script>
+	
+	<style>
+		/* Estilo del botón */
+		.button_style {
+			background-color: pink;
+			border: 2px solid white;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			justify-content: center;
+            align-items: center;
+		}
+		.button_container {
+			text-align: center;
+			
+
+			
+		}
+		#title_image {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+        }
+		@font-face {
+        font-family: 'Made Tommy Medium';
+        src: url('fuente/MADE_TOMMY_\ Medium_PERSONAL_\ USE.otf') format('opentype');
+        }
+
+		h1 {
+			font-family: "Made Tommy Medium";
+			font-size: 21px;
+			color: rgb(136, 136, 136);
+			text-align: center;
+		}
+		
+
+		
+	</style>
+</head>
+<body style="background-color: lightgray">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="nav-side-menu">
+				<!-- Image Title -->
+				<img src="img/LOGO.png" id="title_image" class="img-fluid mt-0" alt="Distrito cultural image">
+				<h1>RESTAURANTE LILI</h1>
+			<!--	<img src="img/LAPAJARERA.png" id="title_image" class="img-fluid mt-0" alt="montoyaEST" style="width: 70%;";style= "margin-left: auto;"; style="margin-right: auto;">-->
+				 <img src="img/12.png" id="title_image" class="img-fluid mt-0" alt="montoya"style="width: 70%;">
+				
+			<!--	 <img src="img/buttons/White/VALORHISTO.png" id="img_VALORHISTO" onclick="Click_Image_Button_Option('VALORHISTO')" class="img-fluid buttons_option mt-1" alt="Button VALORHISTO image">-->
+				 <img src="img/buttons/White/VALORCULTURA.png" id="img_VALORCULTURA" onclick="Click_Image_Button_Option('VALORCULTURA')" class="img-fluid buttons_option mt-1" alt="Button VALORCULTURA image">
+				 <img src="img/buttons/White/VALORESTETICO.png" id="img_VALORESTETICO" onclick="Click_Image_Button_Option('VALORESTETICO')" class="img-fluid buttons_option mt-1" alt="Button VALORESTETICO image">
+			     <img src="img/buttons/White/ELEMENTOARQUITECTÓNICO.png" id="img_ELEMENTOARQUITECTÓNICO" class="img-fluid buttons_option mt-1" alt="Button # image">
+			<div class="button_container"> 
+				<button class="button_style"id="img_DANZA" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option mt-1" alt="Button DANZA image" >VENTANA</button>
+				
+				
+			<!-- aqui hay que hacer los diferentes llamados del otro lado el main3.js cambiarles el link y luego el texto-->
+			 </div>
+				<!--<img src="img/buttons/White/DANZA.png" id="img_DANZA" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option" alt="Button DANZA image">
+				<img src="img/buttons/White/MEMORIA.png" id="img_MEMORIA" onclick="Click_Image_Button_Option('MEMORIA')" class="img-fluid buttons_option" alt="Button MEMORIA image">
+				<img src="img/buttons/White/ARTESANIA.png" id="img_ARTESANIA" onclick="Click_Image_Button_Option('ARTESANIA')" class="img-fluid buttons_option" alt="Button ARTESANIA image"> -->
+
+				<!-- logos Image footer -->
+				<br><br><br>
+				<div class="button_container">
+					<button class="button_style" onclick="redireccionar('anterior')">ANTERIOR</button>
+					&nbsp;&nbsp;
+					<button class="button_style" onclick="redireccionar('siguiente')">SIGUIENTE</button>
+				</div>
+				
+				<script>
+					function redireccionar(direccion) {
+						if (direccion === 'anterior') {
+							window.location.href = "index8.html";
+						} else if (direccion === 'siguiente') {
+							window.location.href = "index10.html";
+						}
+					}
+				</script>
+		        
+			</div>
+		</div>
+
+		<div class="col-md-9">
+			<div id="MapsContainer">
+				<iframe id="MapsFrame" src="https://www.google.com/maps/d/embed?mid=1fImqq1dtUu7uW8JAJcLZRRwQt5hbME1R"></iframe>
+			</div>
+
+			<div id="ContainerDesctipcion">
+				<span class="boton" onclick="CloseContainerDescripcion()">x</span>
+				
+				<p id="TitleDescripcion" class="h5 ml-4 mt-5"></p>
+
+				<!-- Inmuebles descripcion -->
+				<p class="ml-5" id="VALORESTETICODescripcion"><small class="SmallDescripcion">La arquitectura del inmueble es vernácula, está compuesto por una puerta principal y dos ventanas a cada lado.La fachada tiene un sistema de ventilación tipo celosía hecho en madera con motivos geométricos, así mismo posee un parasol hecho en tejas hecho para proteger las puertas y ventanas del sol y de la lluvia. Esta arquitectura se caracteriza igual que la arquitectura caribeña por la utilización de colores fuertes en sus fachadas, que transmiten alegría y las hace llamativas.</small>
+				<br><br>
+				
+			  <!-- <button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option mt-1" alt="Button ELEMENTOARQUITECTÓNICO image" >BALCON</button>
+				<button class="button_style" id="img_Danza" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option mt-1" alt="Button DANZA image">PUERTAS </button><button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option" alt="Button ELEMENTOARQUITECTÓNICO image" >Botón 1</button> -->
+
+			    </p>
+
+				<!-- juegos descripcion -->
+				<p class="ml-5" id="ELEMENTOARQUITECTÓNICODescripcion"><small class="SmallDescripcion">El acceso de la estación del Tranvía tiene puertas de madera, en la parte alta posee rejillas en madera para ventilar, tiene en sus puertas vidrio para la iluminación. Las puertas están flanqueadas por elementos propios del periodo republicano como almohadillados de mortero, mientras que en la parte superior cuenta con un parasol compuesto de estructura metálica y techo de zinc, propio de la arquitectura antillana.</small></p>
+
+				<!-- Cocinas descripcion -->
+				<p class="ml-5" id="CocinasDescripcion"><small class="SmallDescripcion">Las manos que atizan los fogones y dan palote a las ollas, son de las mujeres y los hombres que por años han decidido rendir homenaje a su
+				herencia culinaria. Son las vidas de familias que llegaron al barrio y desde entonces no han dejado de transformar los alimentos para cocinar singulares preparaciones, de aromas, colores y sabores que evocan, principalmente, lo afro en Barrio Abajo. </small></p>
+
+				<!-- Fiestas descripcion -->
+				<p class="ml-5" id="FiestasDescripcion"><small class="SmallDescripcion">Los ritos y rituales hacen parte del calendario cultural del bajero. Lo festivo y lo sacro se mezclan para ponerle ritmo a la vida y generar así un escenario propicio que acerca a los feligreses a un encuentro con lo
+				espiritual. Las calles se convierten en las arterias que dan vida a la procesión de santos y vírgenes como expresiones de la cultura popular. </small></p>
+
+				<!-- Danza descripcion -->
+				<p class="ml-5" id="DanzaDescripcion"><small class="SmallDescripcion">Ventana en madera con bolillos en forma de balaustres,presenta una moldura a su alrededor junto con un parasol en tejas de armazón en madera. Se aprecia un detalle constructivo donde existe un sobreancho de la mampostería en una tercera parte de su altura, esto para darle más estabilidad estructural al muro, en parte porque en sus comienzos estos muros se construían en bahareque y arcilla. </small></p>
+
+				<!-- Memoria descripcion -->
+				<p class="ml-5" id="MemoriaDescripcion"><small class="SmallDescripcion">Con los años, el paisaje y la vida cultural de Barrio Abajo se ha transformado. Sin embargo, aún permanece en la memoria colectiva la
+				nostalgia por algunos sectores que en épocas pasadas gozaron de gran popularidad y aceptación; lugares donde alguna vez se cultivó la historia de una comunidad que nació frente al río. </small></p>
+
+				<!-- Artesania descripcion -->
+				<p class="ml-5" id="VALORCULTURADescripcion"><small class="SmallDescripcion">Este inmueble actualmente representa un hito entre la comunidad bajera por el uso que presenta hoy en día, el cual corresponde a un restaurante de comida casera conocido como: "Restaurante Lili" reconocido principalmente por la calidad de su servicio al cliente y el sabor de sus platos típicos.</small></p>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	
+</body>
+</html>

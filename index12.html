@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cartografia - Barrio Abajo</title>
+	<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+	<!-- Css styles -->
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- Js Scripts -->
+	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main12.js"></script>
+	
+	<style>
+		/* Estilo del botón */
+		.button_style {
+			background-color: pink;
+			border: 2px solid white;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			justify-content: center;
+            align-items: center;
+		}
+		.button_container {
+			text-align: center;
+			
+
+			
+		}
+		#title_image {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+        }
+		@font-face {
+        font-family: 'Made Tommy Medium';
+        src: url('fuente/MADE_TOMMY_\ Medium_PERSONAL_\ USE.otf') format('opentype');
+        }
+
+		h1 {
+			font-family: "Made Tommy Medium";
+			font-size: 21px;
+			color: rgb(136, 136, 136);
+			text-align: center;
+		}
+		
+
+		
+	</style>
+</head>
+<body style="background-color: lightgray">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="nav-side-menu">
+				<!-- Image Title -->
+				<img src="img/LOGO.png" id="title_image" class="img-fluid mt-0" alt="Distrito cultural image">
+				<h1>MUSEO DEL CARIBE</h1>
+			<!--	<img src="img/LAPAJARERA.png" id="title_image" class="img-fluid mt-0" alt="montoyaEST" style="width: 70%;";style= "margin-left: auto;"; style="margin-right: auto;">-->
+				 <img src="img/9.png" id="title_image" class="img-fluid mt-0" alt="montoya"style="width: 70%;">
+				
+			    <img src="img/buttons/White/VALORHISTO.png" id="img_VALORHISTO" onclick="Click_Image_Button_Option('VALORHISTO')" class="img-fluid buttons_option mt-1" alt="Button VALORHISTO image">
+				 <img src="img/buttons/White/VALORCULTURA.png" id="img_VALORCULTURA" onclick="Click_Image_Button_Option('VALORCULTURA')" class="img-fluid buttons_option mt-1" alt="Button VALORCULTURA image">
+				 <img src="img/buttons/White/VALORESTETICO.png" id="img_VALORESTETICO" onclick="Click_Image_Button_Option('VALORESTETICO')" class="img-fluid buttons_option mt-1" alt="Button VALORESTETICO image">
+			     <img src="img/buttons/White/ELEMENTOARQUITECTÓNICO.png" id="img_ELEMENTOARQUITECTÓNICO"  class="img-fluid buttons_option mt-1" alt="Button # image">
+			<div class="button_container"> 
+				<button class="button_style"id="img_DANZA" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option mt-1" alt="Button DANZA image" >FACHADA</button>
+
+				
+			<!-- aqui hay que hacer los diferentes llamados del otro lado el main3.js cambiarles el link y luego el texto-->
+			 </div>
+				<!--<img src="img/buttons/White/DANZA.png" id="img_DANZA" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option" alt="Button DANZA image">
+				<img src="img/buttons/White/MEMORIA.png" id="img_MEMORIA" onclick="Click_Image_Button_Option('MEMORIA')" class="img-fluid buttons_option" alt="Button MEMORIA image">
+				<img src="img/buttons/White/ARTESANIA.png" id="img_ARTESANIA" onclick="Click_Image_Button_Option('ARTESANIA')" class="img-fluid buttons_option" alt="Button ARTESANIA image"> -->
+
+				<!-- logos Image footer -->
+				<br><br><br>
+				<div class="button_container">
+					<button class="button_style" onclick="redireccionar('anterior')">ANTERIOR</button>
+					&nbsp;&nbsp;
+					<button class="button_style" onclick="redireccionar('siguiente')">SIGUIENTE</button>
+				</div>
+				
+				<script>
+					function redireccionar(direccion) {
+						if (direccion === 'anterior') {
+							window.location.href = "index11.html";
+						} else if (direccion === 'siguiente') {
+							window.location.href = "index.html";
+						}
+					}
+				</script>
+		        
+			</div>
+		</div>
+
+		<div class="col-md-9">
+			<div id="MapsContainer">
+				<iframe id="MapsFrame" src="https://www.google.com/maps/d/embed?mid=1fImqq1dtUu7uW8JAJcLZRRwQt5hbME1R"></iframe>
+			</div>
+
+			<div id="ContainerDesctipcion">
+				<span class="boton" onclick="CloseContainerDescripcion()">x</span>
+				
+				<p id="TitleDescripcion" class="h5 ml-4 mt-5"></p>
+
+				<!-- Inmuebles descripcion -->
+				<p class="ml-5" id="VALORESTETICODescripcion"><small class="SmallDescripcion">Cuenta con una arquitectura de tipo contemporánea, donde el edificio además de ser funcional como museo, es un referente como icono de la ciudad. Su materialidad está compuesta por concreto, acero, piedra laja, y madera; está compuesto por una composición formal de elementos geométricos determinados por el ángulo recto.</small>
+				<br><br>
+				
+			  <!-- <button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option mt-1" alt="Button ELEMENTOARQUITECTÓNICO image" >BALCON</button>
+				<button class="button_style" id="img_Danza" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option mt-1" alt="Button DANZA image">PUERTAS </button><button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option" alt="Button ELEMENTOARQUITECTÓNICO image" >Botón 1</button> -->
+
+			    </p>
+
+				<!-- juegos descripcion -->
+				<p class="ml-5" id="ELEMENTOARQUITECTÓNICODescripcion"><small class="SmallDescripcion">El acceso de la estación del Tranvía tiene puertas de madera, en la parte alta posee rejillas en madera para ventilar, tiene en sus puertas vidrio para la iluminación. Las puertas están flanqueadas por elementos propios del periodo republicano como almohadillados de mortero, mientras que en la parte superior cuenta con un parasol compuesto de estructura metálica y techo de zinc, propio de la arquitectura antillana.</small></p>
+
+				<!-- Cocinas descripcion -->
+				<p class="ml-5" id="CocinasDescripcion"><small class="SmallDescripcion">Las manos que atizan los fogones y dan palote a las ollas, son de las mujeres y los hombres que por años han decidido rendir homenaje a su
+				herencia culinaria. Son las vidas de familias que llegaron al barrio y desde entonces no han dejado de transformar los alimentos para cocinar singulares preparaciones, de aromas, colores y sabores que evocan, principalmente, lo afro en Barrio Abajo. </small></p>
+
+				<!-- Fiestas descripcion -->
+				<p class="ml-5" id="VALORHISTODescripcion"><small class="SmallDescripcion">El museo del Caribe abrió sus puertas en el año 2009 posicionándose como el primer museo regional de Colombia; a su vez, presentó una propuesta innovadora en varios campos: la interacción dinámica y más sensitiva con las obras expuestas, a través de la inmersión en la misma; del mismo modo, siendo estrategia de apropiación del conocimiento para los visitantes; y como propuesta de construcción, contando con la participación en su diseño del arquitecto Giancarlo Mazzantti, fundador de “El Equipo Mazzanti” en donde trabaja actualmente como arquitecto diseñador. </small></p>
+
+				<!-- Danza descripcion -->
+				<p class="ml-5" id="DanzaDescripcion"><small class="SmallDescripcion">La fachada posee una arquitectura geométrica, que presenta como objeto focal el museo, un gran cubo con una envolvente de concreto y otras caras con aberturas y combinaciones con otras formas poliédricas, las cuales han originado un conjunto con unos espacios armoniosos, hay que manifestar que la elevación no es natural, pero se hace para resaltar el objeto principal de diseño. </small></p>
+
+				<!-- Memoria descripcion -->
+				<p class="ml-5" id="MemoriaDescripcion"><small class="SmallDescripcion">Con los años, el paisaje y la vida cultural de Barrio Abajo se ha transformado. Sin embargo, aún permanece en la memoria colectiva la
+				nostalgia por algunos sectores que en épocas pasadas gozaron de gran popularidad y aceptación; lugares donde alguna vez se cultivó la historia de una comunidad que nació frente al río. </small></p>
+
+				<!-- Artesania descripcion -->
+				<p class="ml-5" id="VALORCULTURADescripcion"><small class="SmallDescripcion">Este es un lugar en el que los usuarios pueden adentrarse a las raíces culturales de la costa Atlántica del territorio colombiano. Siendo el primer museo regional del país, su tema central es el Caribe colombiano, ofreciéndo un espacio para la divulgación y el fortalecimiento de la identidad. Dicho inmueble hace parte del complejo cultural de Caribe y cuenta con espacios educativos en los que se exponen las manifestaciones culturales y la memoria histórica de los pobladores ribereños a través de 6 salas en las que se hace énfasis en la doble pertenencia de la región, tanto a Colombia como a la cuenca del Gran Caribe.</small></p>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	
+</body>
+</html>

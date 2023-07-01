@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cartografia - Barrio Abajo</title>
+	<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+	<!-- Css styles -->
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- Js Scripts -->
+	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main3.js"></script>
+	
+	<style>
+		/* Estilo del botón */
+		.button_style {
+			background-color: pink;
+			border: 2px solid white;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			justify-content: center;
+            align-items: center;
+		}
+		.button_container {
+			text-align: center;
+			
+
+			
+		}
+		#title_image {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+        }
+		@font-face {
+        font-family: 'Made Tommy Medium';
+        src: url('fuente/MADE_TOMMY_\ Medium_PERSONAL_\ USE.otf') format('opentype');
+        }
+
+		h1 {
+			font-family: "Made Tommy Medium";
+			font-size: 21px;
+			color: rgb(136, 136, 136);
+			text-align: center;
+		}
+
+		
+	</style>
+</head>
+<body style="background-color: lightgray">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="nav-side-menu">
+				<!-- Image Title -->
+				<img src="img/LOGO.png" id="title_image" class="img-fluid mt-0" alt="Distrito cultural image">
+				<h1>LA ADUANA </h1>
+			<!-- 	<img src="img/LAADUANA.png" id="title_image" class="img-fluid mt-0" alt="montoyaEST" style="width: 70%;";style= "margin-left: auto;"; style="margin-right: auto;">-->
+				 <img src="img/7.png" id="title_image" class="img-fluid mt-0" alt="montoya"style="width: 70%;">
+				<img src="img/buttons/White/VALORHISTO.png" id="img_VALORHISTO" onclick="Click_Image_Button_Option('VALORHISTO')" class="img-fluid buttons_option mt-1" alt="Button VALORHISTO image">
+				<img src="img/buttons/White/VALORCULTURA.png" id="img_VALORCULTURA" onclick="Click_Image_Button_Option('VALORCULTURA')" class="img-fluid buttons_option mt-1" alt="Button VALORCULTURA image">
+				<img src="img/buttons/White/VALORESTETICO.png" id="img_VALORESTETICO" onclick="Click_Image_Button_Option('VALORESTETICO')" class="img-fluid buttons_option mt-1" alt="Button VALORESTETICO image">
+			   <img src="img/buttons/White/ELEMENTOARQUITECTÓNICO.png" id="img_ELEMENTOARQUITECTÓNICO" class="img-fluid buttons_option mt-1" alt="Button ELEMENTOARQUITECTÓNICO  image">
+			<div class="button_container"> 
+				<button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option mt-1" alt="Button ELEMENTOARQUITECTÓNICO image" >COLUMNAS</button>
+				<button class="button_style"id="img_DANZA" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option mt-1" alt="Button DANZA image" >FRONTÓN</button>
+				<button class="button_style"id="img_MEMORIA" onclick="Click_Image_Button_Option('MEMORIA')" class="img-fluid buttons_option mt-1" alt="Button MEMORIA image" >VENTANAS</button>
+			<!-- aqui hay que hacer los diferentes llamados del otro lado el main3.js cambiarles el link y luego el texto-->
+			 </div>
+				<!--<img src="img/buttons/White/DANZA.png" id="img_DANZA" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option" alt="Button DANZA image">
+				<img src="img/buttons/White/MEMORIA.png" id="img_MEMORIA" onclick="Click_Image_Button_Option('MEMORIA')" class="img-fluid buttons_option" alt="Button MEMORIA image">
+				<img src="img/buttons/White/ARTESANIA.png" id="img_ARTESANIA" onclick="Click_Image_Button_Option('ARTESANIA')" class="img-fluid buttons_option" alt="Button ARTESANIA image"> -->
+
+				<!-- logos Image footer -->
+				<br><br><br>
+				<div class="button_container">
+					<button class="button_style" onclick="redireccionar('anterior')">ANTERIOR</button>
+					&nbsp;&nbsp;
+					<button class="button_style" onclick="redireccionar('siguiente')">SIGUIENTE</button>
+				</div>
+				
+				<script>
+					function redireccionar(direccion) {
+						if (direccion === 'anterior') {
+							window.location.href = "index2.html";
+						} else if (direccion === 'siguiente') {
+							window.location.href = "index4.html";
+						}
+					}
+				</script>
+		        
+			</div>
+		</div>
+
+		<div class="col-md-9">
+			<div id="MapsContainer">
+				<iframe id="MapsFrame" src="https://www.google.com/maps/d/embed?mid=1fImqq1dtUu7uW8JAJcLZRRwQt5hbME1R"></iframe>
+			</div>
+
+			<div id="ContainerDesctipcion">
+				<span class="boton" onclick="CloseContainerDescripcion()">x</span>
+				
+				<p id="TitleDescripcion" class="h5 ml-4 mt-5"></p>
+
+				<!-- Inmuebles descripcion -->
+				<p class="ml-5" id="VALORESTETICODescripcion"><small class="SmallDescripcion">La aduana es una edificación perteneciente al período republicano que se caracteriza por su influencia neoclásica en su diseño y arquitectura. Inspirada en elementos clásicos como las columnas y frontones, esta construcción presenta una estética elegante. Su diseño se enfoca en la escala, el ritmo y la monumentalidad, buscando generar un impacto visual y simbólico en quienes la observan.</small>
+				<br><br>
+				
+			  <!-- <button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option mt-1" alt="Button ELEMENTOARQUITECTÓNICO image" >BALCON</button>
+				<button class="button_style" id="img_Danza" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option mt-1" alt="Button DANZA image">PUERTAS </button><button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option" alt="Button ELEMENTOARQUITECTÓNICO image" >Botón 1</button> -->
+
+			    </p>
+
+				<!-- juegos descripcion -->
+				<p class="ml-5" id="ELEMENTOARQUITECTÓNICODescripcion"><small class="SmallDescripcion">Es una columna de inspiración neoclásica, cuenta con una base, dos molduras a modo de collarín. Su fuste es combinado ya que la parte inferior es de tipo jónico con estrías acanaladas y la otra mitad es propio de la columna toscana que es lisa. Después presenta un collar con escudo de armas y una serie de pequeños canales que lo adornan, seguido de otro collar a manera de corona con motivos fitomorfos, y por último posee un equino cuadrado rematado con dos molduras delgadas.Este elemento arquitectónico remata con un arquitrabe de tres golpes.</small></p>
+
+				<!-- Cocinas descripcion -->
+				<p class="ml-5" id="CocinasDescripcion"><small class="SmallDescripcion">Las manos que atizan los fogones y dan palote a las ollas, son de las mujeres y los hombres que por años han decidido rendir homenaje a su
+				herencia culinaria. Son las vidas de familias que llegaron al barrio y desde entonces no han dejado de transformar los alimentos para cocinar singulares preparaciones, de aromas, colores y sabores que evocan, principalmente, lo afro en Barrio Abajo. </small></p>
+
+				<!-- Fiestas descripcion -->
+				<p class="ml-5" id="VALORHISTODescripcion"><small class="SmallDescripcion">Siendo la ciudad de Barranquilla el más importante puerto de Colombia sobre el Caribe se instaló en el año 1849 la aduana. La creación de un puerto capaz de permitir el acceso de cruceros y trasatlánticos (Bocas de Ceniza), convirtió a la ciudad en la gran puerta del Caribe y en la tercera de mayor importancia económica del país. Por otro lado, con el desarrollo económico que se estaba presentando en Barranquilla, personajes notables llegaron al país entre los cuales se destaca al Ingeniero civil y eléctrico Leslie Olivier Arbouin Groom. El cual, hizo su arribo a Colombia en 1899 luego de ganar el concurso organizado por el Ministerio de Obras Públicas para sustituir el edificio de la aduana que se había quemado. </small></p>
+
+				<!-- Danza descripcion -->
+				<p class="ml-5" id="DanzaDescripcion"><small class="SmallDescripcion">Este un Frontón clásico se encuentra soportado sobre un arquitrabe de tres secciones, utilizado también para colocarle el nombre al edificio. Es un elemento decorativo de inspiración neoclásica, para demarcar el acceso al edificio. </small></p>
+
+				<!-- Memoria descripcion -->
+				<p class="ml-5" id="MemoriaDescripcion"><small class="SmallDescripcion">Esta abertura del edificio se encuentra rodeada por una moldura o jamba elaborada en yeso, en la parte baja tiene una balaustrada con remate de una pequeña cornisa que cuando se abren las ventanas hace las veces de balcón. Posee un parasol de lona de color azul para cortar el sol de la tarde.</small></p>
+
+				<!-- Artesania descripcion -->
+				<p class="ml-5" id="VALORCULTURADescripcion"><small class="SmallDescripcion">La existencia y actual funcionamiento de este complejo cultural; el cual alberga en sus instalaciones a: la Biblioteca Piloto del Caribe, la Biblioteca Infantil Piloto del Caribe, el Archivo Histórico del departamento del Atlántico y el Centro de Documentación Musical Hans Federico Neuman; contribuye a la conservación y promoción de los valores culturales de la región, y a su vez estos espacios son utilizados para la realización de eventos, presentaciones, asambleas y reuniones.</small></p>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	
+</body>
+</html>

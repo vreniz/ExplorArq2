@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cartografia - Barrio Abajo</title>
+	<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+	<!-- Css styles -->
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- Js Scripts -->
+	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main5.js"></script>
+	
+	<style>
+		/* Estilo del botón */
+		.button_style {
+			background-color: pink;
+			border: 2px solid white;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			justify-content: center;
+            align-items: center;
+		}
+		.button_container {
+			text-align: center;
+			
+
+			
+		}
+		#title_image {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+        }
+		@font-face {
+        font-family: 'Made Tommy Medium';
+        src: url('fuente/MADE_TOMMY_\ Medium_PERSONAL_\ USE.otf') format('opentype');
+        }
+
+		h1 {
+			font-family: "Made Tommy Medium";
+			font-size: 21px;
+			color: rgb(136, 136, 136);
+			text-align: center;
+		}
+		
+
+		
+	</style>
+</head>
+<body style="background-color: lightgray">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="nav-side-menu">
+				<!-- Image Title -->
+				<img src="img/LOGO.png" id="title_image" class="img-fluid mt-0" alt="Distrito cultural image">
+				<h1>EL PASAJE</h1>
+			<!--	<img src="img/LAPAJARERA.png" id="title_image" class="img-fluid mt-0" alt="montoyaEST" style="width: 70%;";style= "margin-left: auto;"; style="margin-right: auto;">-->
+				 <img src="img/4.png" id="title_image" class="img-fluid mt-0" alt="montoya"style="width: 70%;">
+				<img src="img/buttons/White/VALORHISTO.png" id="img_VALORHISTO" onclick="Click_Image_Button_Option('VALORHISTO')" class="img-fluid buttons_option mt-1" alt="Button VALORHISTO image">
+				<!-- <img src="img/buttons/White/VALORCULTURA.png" id="img_VALORCULTURA" onclick="Click_Image_Button_Option('VALORCULTURA')" class="img-fluid buttons_option mt-1" alt="Button VALORCULTURA image">-->
+				<img src="img/buttons/White/VALORESTETICO.png" id="img_VALORESTETICO" onclick="Click_Image_Button_Option('VALORESTETICO')" class="img-fluid buttons_option mt-1" alt="Button VALORESTETICO image">
+			   <img src="img/buttons/White/ELEMENTOARQUITECTÓNICO.png" id="img_ELEMENTOARQUITECTÓNICO"  class="img-fluid buttons_option mt-1" alt="Button # image">
+			<div class="button_container"> 
+				<button class="button_style"id="img_DANZA" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option mt-1" alt="Button DANZA image" >COLUMNAS SALOMÓNICAS</button>
+				<button class="button_style"id="img_MEMORIA" onclick="Click_Image_Button_Option('MEMORIA')" class="img-fluid buttons_option mt-1" alt="Button MEMORIA image" >VENTANA</button>
+				
+			<!-- aqui hay que hacer los diferentes llamados del otro lado el main3.js cambiarles el link y luego el texto-->
+			 </div>
+				<!--<img src="img/buttons/White/DANZA.png" id="img_DANZA" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option" alt="Button DANZA image">
+				<img src="img/buttons/White/MEMORIA.png" id="img_MEMORIA" onclick="Click_Image_Button_Option('MEMORIA')" class="img-fluid buttons_option" alt="Button MEMORIA image">
+				<img src="img/buttons/White/ARTESANIA.png" id="img_ARTESANIA" onclick="Click_Image_Button_Option('ARTESANIA')" class="img-fluid buttons_option" alt="Button ARTESANIA image"> -->
+
+				<!-- logos Image footer -->
+				<br><br><br>
+				<div class="button_container">
+					<button class="button_style" onclick="redireccionar('anterior')">ANTERIOR</button>
+					&nbsp;&nbsp;
+					<button class="button_style" onclick="redireccionar('siguiente')">SIGUIENTE</button>
+				</div>
+				
+				<script>
+					function redireccionar(direccion) {
+						if (direccion === 'anterior') {
+							window.location.href = "index4.html";
+						} else if (direccion === 'siguiente') {
+							window.location.href = "index6.html";
+						}
+					}
+				</script>
+		        
+			</div>
+		</div>
+
+		<div class="col-md-9">
+			<div id="MapsContainer">
+				<iframe id="MapsFrame" src="https://www.google.com/maps/d/embed?mid=1fImqq1dtUu7uW8JAJcLZRRwQt5hbME1R"></iframe>
+			</div>
+
+			<div id="ContainerDesctipcion">
+				<span class="boton" onclick="CloseContainerDescripcion()">x</span>
+				
+				<p id="TitleDescripcion" class="h5 ml-4 mt-5"></p>
+
+				<!-- Inmuebles descripcion -->
+				<p class="ml-5" id="VALORESTETICODescripcion"><small class="SmallDescripcion">Esta edificación tiene una arquitectura ecléctica, pues toma elementos de varios estilos de diseño. Las ventanas de madera son características del estilo colonial, cuentan con un detalle de arco de medio punto y tejas de arcilla en antepecho. Por otra parte, del estilo Art–Decó se utiliza la ornamentación de figuras geométricas y parasoles en concreto,  mientras que del estilo Barroco usa las columnas salomónicas. </small>
+				<br><br>
+				
+			  <!-- <button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option mt-1" alt="Button ELEMENTOARQUITECTÓNICO image" >BALCON</button>
+				<button class="button_style" id="img_Danza" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option mt-1" alt="Button DANZA image">PUERTAS </button><button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option" alt="Button ELEMENTOARQUITECTÓNICO image" >Botón 1</button> -->
+
+			    </p>
+
+				<!-- juegos descripcion -->
+				<p class="ml-5" id="ELEMENTOARQUITECTÓNICODescripcion"><small class="SmallDescripcion">El acceso de la estación del Tranvía tiene puertas de madera, en la parte alta posee rejillas en madera para ventilar, tiene en sus puertas vidrio para la iluminación. Las puertas están flanqueadas por elementos propios del periodo republicano como almohadillados de mortero, mientras que en la parte superior cuenta con un parasol compuesto de estructura metálica y techo de zinc, propio de la arquitectura antillana.</small></p>
+
+				<!-- Cocinas descripcion -->
+				<p class="ml-5" id="CocinasDescripcion"><small class="SmallDescripcion">Las manos que atizan los fogones y dan palote a las ollas, son de las mujeres y los hombres que por años han decidido rendir homenaje a su
+				herencia culinaria. Son las vidas de familias que llegaron al barrio y desde entonces no han dejado de transformar los alimentos para cocinar singulares preparaciones, de aromas, colores y sabores que evocan, principalmente, lo afro en Barrio Abajo. </small></p>
+
+				<!-- Fiestas descripcion -->
+				<p class="ml-5" id="VALORHISTODescripcion"><small class="SmallDescripcion">En este conjunto de inmuebles se realizaba una especie de bazar, llamado "El Songo Zorongo", en la que todos los habitantes del sector aledaño a este, se reunían a beber, bailar y organizar partidas de juegos populares del barrio como lo es "La Chequita" o juegos como el dominó. Por otro lado, fue cuna de personajes notables para el sector, entre los cuales se destaca al pintor galardonado, Efraín Cortes. </small></p>
+
+				<!-- Danza descripcion -->
+				<p class="ml-5" id="DanzaDescripcion"><small class="SmallDescripcion">Es un elemento arquitectónico que tiene el fuste en forma helicoidal y con una guirnalda de forma fitomorfa que la rodea transversalmente, fue comúnmente utilizada en Europa y América en el periodo barroco. </small></p>
+
+				<!-- Memoria descripcion -->
+				<p class="ml-5" id="MemoriaDescripcion"><small class="SmallDescripcion">Ventana en madera con bolillos en forma de balaustres, su forma superior es de arco de medio punto y alrededor tiene una simulación de piedras de sillares. </small></p>
+
+				<!-- Artesania descripcion -->
+				<p class="ml-5" id="ArtesaniaDescripcion"><small class="SmallDescripcion">HOLAAA MUNDO .</small></p>
+			</div>
+		</div>
+	</div>
+	
+
+	
+</body>
+</html>

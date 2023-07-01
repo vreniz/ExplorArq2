@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cartografia - Barrio Abajo</title>
+	<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+	<!-- Css styles -->
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main7.css">
+
+	<!-- Js Scripts -->
+	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main7.js"></script>
+	
+	<style>
+		/* Estilo del botón */
+		.button_style {
+			background-color: pink;
+			border: 2px solid white;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			justify-content: center;
+            align-items: center;
+		}
+		.button_container {
+			text-align: center;
+			
+
+			
+		}
+		#title_image {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+        }
+		@font-face {
+        font-family: 'Made Tommy Medium';
+        src: url('fuente/MADE_TOMMY_\ Medium_PERSONAL_\ USE.otf') format('opentype');
+        }
+
+		h1 {
+			font-family: "Made Tommy Medium";
+			font-size: 21px;
+			color: rgb(136, 136, 136);
+			text-align: center;
+		}
+		
+
+		
+	</style>
+</head>
+<body style="background-color: lightgray">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="nav-side-menu">
+				<!-- Image Title -->
+				<img src="img/LOGO.png" id="title_image" class="img-fluid mt-0" alt="Distrito cultural image">
+				<h1>FÁBRICA DE CULTURA</h1>
+			<!--	<img src="img/LAPAJARERA.png" id="title_image" class="img-fluid mt-0" alt="montoyaEST" style="width: 70%;";style= "margin-left: auto;"; style="margin-right: auto;">-->
+				 <img src="img/6.png" id="title_image" class="img-fluid mt-0" alt="montoya"style="width: 70%;">
+				 <img src="img/buttons/White/VALORHISTO.png" id="img_VALORHISTO" onclick="Click_Image_Button_Option('VALORHISTO')" class="img-fluid buttons_option mt-1" alt="Button VALORHISTO image">
+				 <img src="img/buttons/White/VALORCULTURA.png" id="img_VALORCULTURA" onclick="Click_Image_Button_Option('VALORCULTURA')" class="img-fluid buttons_option mt-1" alt="Button VALORCULTURA image">
+				 <img src="img/buttons/White/VALORESTETICO.png" id="img_VALORESTETICO" onclick="Click_Image_Button_Option('VALORESTETICO')" class="img-fluid buttons_option mt-1" alt="Button VALORESTETICO image">
+			     <img src="img/buttons/White/ELEMENTOARQUITECTÓNICO.png" id="img_ELEMENTOARQUITECTÓNICO" class="img-fluid buttons_option mt-1" alt="Button # image">
+			<div class="button_container"> 
+				<button class="button_style"id="img_DANZA" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option mt-1" alt="Button DANZA image" >FACHADA</button>
+				
+				
+			<!-- aqui hay que hacer los diferentes llamados del otro lado el main3.js cambiarles el link y luego el texto-->
+			 </div>
+				<!--<img src="img/buttons/White/DANZA.png" id="img_DANZA" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option" alt="Button DANZA image">
+				<img src="img/buttons/White/MEMORIA.png" id="img_MEMORIA" onclick="Click_Image_Button_Option('MEMORIA')" class="img-fluid buttons_option" alt="Button MEMORIA image">
+				<img src="img/buttons/White/ARTESANIA.png" id="img_ARTESANIA" onclick="Click_Image_Button_Option('ARTESANIA')" class="img-fluid buttons_option" alt="Button ARTESANIA image"> -->
+
+				<!-- logos Image footer -->
+				<br><br><br>
+				<div class="button_container">
+					<button class="button_style" onclick="redireccionar('anterior')">ANTERIOR</button>
+					&nbsp;&nbsp;
+					<button class="button_style" onclick="redireccionar('siguiente')">SIGUIENTE</button>
+				</div>
+				
+				<script>
+					function redireccionar(direccion) {
+						if (direccion === 'anterior') {
+							window.location.href = "index6.html";
+						} else if (direccion === 'siguiente') {
+							window.location.href = "index8.html";
+						}
+					}
+				</script>
+		        
+			</div>
+		</div>
+
+		<div class="col-md-9">
+			<div id="MapsContainer">
+				<iframe id="MapsFrame" src="https://www.google.com/maps/d/embed?mid=1fImqq1dtUu7uW8JAJcLZRRwQt5hbME1R"></iframe>
+			</div>
+
+			<div id="ContainerDesctipcion">
+				
+				<span class="boton" onclick="CloseContainerDescripcion()">x</span>
+				
+				<p id="TitleDescripcion" class="h5 ml-4 mt-5"></p>
+	
+
+				<!-- Inmuebles descripcion -->
+				<p class="ml-5" id="VALORESTETICODescripcion"><small class="SmallDescripcion">Este edificio es del periodo republicano y tiene influencia Art-Decó, se caracteriza por combinar elementos geométricos rectangulares, cuadrados, romboides y circulares como remate o detalle. Utiliza la línea a manera de moldura como elemento integrador de la fachada a nivel horizontal y cuenta con materiales modernos como el acero, concreto, vidrio, vitroblock y madera.</small>
+				<br><br>
+				
+			  <!-- <button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option mt-1" alt="Button ELEMENTOARQUITECTÓNICO image" >BALCON</button>
+				<button class="button_style" id="img_Danza" onclick="Click_Image_Button_Option('DANZA')" class="img-fluid buttons_option mt-1" alt="Button DANZA image">PUERTAS </button><button class="button_style"id="img_ELEMENTOARQUITECTÓNICO" onclick="Click_Image_Button_Option('ELEMENTOARQUITECTÓNICO')" class="img-fluid buttons_option" alt="Button ELEMENTOARQUITECTÓNICO image" >Botón 1</button> -->
+
+			    </p>
+
+				<!-- juegos descripcion -->
+				<p class="ml-5" id="ELEMENTOARQUITECTÓNICODescripcion"><small class="SmallDescripcion">El acceso de la estación del Tranvía tiene puertas de madera, en la parte alta posee rejillas en madera para ventilar, tiene en sus puertas vidrio para la iluminación. Las puertas están flanqueadas por elementos propios del periodo republicano como almohadillados de mortero, mientras que en la parte superior cuenta con un parasol compuesto de estructura metálica y techo de zinc, propio de la arquitectura antillana.</small></p>
+
+				<!-- Cocinas descripcion -->
+				<p class="ml-5" id="CocinasDescripcion"><small class="SmallDescripcion">Las manos que atizan los fogones y dan palote a las ollas, son de las mujeres y los hombres que por años han decidido rendir homenaje a su
+				herencia culinaria. Son las vidas de familias que llegaron al barrio y desde entonces no han dejado de transformar los alimentos para cocinar singulares preparaciones, de aromas, colores y sabores que evocan, principalmente, lo afro en Barrio Abajo. </small></p>
+
+				<!-- Fiestas descripcion -->
+				<p class="ml-5" id="FiestasDescripcion"><small class="SmallDescripcion">Los ritos y rituales hacen parte del calendario cultural del bajero. Lo festivo y lo sacro se mezclan para ponerle ritmo a la vida y generar así un escenario propicio que acerca a los feligreses a un encuentro con lo
+				espiritual. Las calles se convierten en las arterias que dan vida a la procesión de santos y vírgenes como expresiones de la cultura popular. </small></p>
+				
+
+				<!-- Danza descripcion -->
+				<p class="ml-5" id="VALORHISTODescripcion"><small class="SmallDescripcion">Durante la década de los años 20´s, esta edificación fue sede de la fábrica de Coltabaco, inaugurada en el mes de julio de 1924, luego de que la compañía nacional de tabaco fortaleciera la fusión de los demás fabricantes de cigarrillo de la ciudad, y llegó a posicionarse como el principal punto de fábrica de la zona norte colombiana, funcionando allí hasta 1976.</small></p>
+					
+
+				<!-- Memoria descripcion -->
+				<p class="ml-5" id="DanzaDescripcion"><small class="SmallDescripcion"> Es una edificación de dos plantas que cuenta con influencia Art Decó, donde su armonía está equilibrada por formas geométricas principalmente rectángulos y está flanqueada por dos pequeños salientes, por dos aberturas de las ventanas en primer y segundo piso, ambos de forma rectangular. Tiene un cuerpo central donde en el primer piso presenta cuatro cuerpos rectangulares, conteniendo dentro vitroblock de vidrio a cada lado del acceso. En la parte del segundo piso presenta cuatro ventanas rectangulares y una ventana central del mismo ancho de la puerta del primer piso, estas ventanas tienen unas rejillas de ventilación, con orificios de forma geométrica. Presenta en el primer piso un basamento en mortero junto con molduras lineales para dividir los módulos del primer y segundo piso. Remata la fachada con un antepecho con adornos de elementos geométricos y con un remate focal de una moldura en forma de círculo</small></p>
+
+				<!-- Artesania descripcion -->
+				<p class="ml-5" id="VALORCULTURADescripcion"><small class="SmallDescripcion">En la fábrica de la cultura se promueve la actividad social y cultural mediante las distintas ramas del arte que se enseñan y se desarrollan en la edificación.
+					Por otro lado, la restauración de este inmueble marcó un precedente en implementación de estrategias eco amigables, entre las cuales destacan alternativas como los sistemas sostenibles de agua que implementaron y los paneles solares. 
+					</small></p>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	
+</body>
+</html>
